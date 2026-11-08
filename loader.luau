@@ -1,6 +1,7 @@
--- ============================================================
---  Zynex Hub | Fisch Edition (Official Keyless)
---  Developer: zynexdev
--- ============================================================
+local ok, err = pcall(function()
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/myheisenberg/Fisch/main/nokey.luau?t=" .. tostring(os.time())))()
+end)
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/myheisenberg/Fisch/main/nokey.luau"))()
+if not ok then
+    warn("[Loader Error]:", err)
+end
